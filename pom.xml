@@ -43,11 +43,11 @@
 		</dependency>
 
 <!--		importing my private mvn package my_math-->
-		<dependency>
-			<groupId>org.my_utilities</groupId>
-			<artifactId>my_math</artifactId>
-			<version>1.0</version>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>org.my_utilities</groupId>-->
+<!--			<artifactId>my_math</artifactId>-->
+<!--			<version>1.0</version>-->
+<!--		</dependency>-->
 	</dependencies>
 
 	<build>
