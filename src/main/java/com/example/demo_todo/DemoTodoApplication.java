@@ -3,7 +3,6 @@ package com.example.demo_todo;
 import com.example.demo_todo.strategey.ImageStore;
 import com.example.demo_todo.strategey.concrete.JpegCompressor;
 import com.example.demo_todo.strategey.concrete.PngCompressor;
-import my_mathematics.MyMain;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
