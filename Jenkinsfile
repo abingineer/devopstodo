@@ -1,5 +1,9 @@
 pipeline {
     agent any
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3626ec4178dc184bbb95e05e85e263fd9c5e87ba
     tools{
         maven 'maven_3.9.8'
     }
@@ -18,9 +22,16 @@ pipeline {
                 }
             }
         }
-        stage('Push image to docker hub'){
-            steps{
+        stage ('Build docker image') {
+            steps {
                 script{
+                  sh 'docker build -t aboubacar/todo:latest .'
+                }
+            }
+        }
+        stage ('Push image to docker hub') {
+            steps {
+                script {
                    withCredentials([string(credentialsId: 'dockerhubpwd', variable: 'dockerhubpwd')]) {
 
                         sh 'docker login -u aboubacar -p ${dockerhubpwd}'
