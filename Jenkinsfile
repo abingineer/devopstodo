@@ -1,9 +1,5 @@
 pipeline {
     agent any
-<<<<<<< HEAD
-=======
-
->>>>>>> 3626ec4178dc184bbb95e05e85e263fd9c5e87ba
     tools{
         maven 'maven_3.9.8'
     }
