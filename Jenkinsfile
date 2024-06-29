@@ -22,13 +22,6 @@ pipeline {
                 }
             }
         }
-        stage ('Build docker image') {
-            steps {
-                script{
-                  sh 'docker build -t aboubacar/todo:latest .'
-                }
-            }
-        }
         stage ('Push image to docker hub') {
             steps {
                 script {
