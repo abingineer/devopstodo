@@ -23,7 +23,6 @@ public class DemoTodoApplication {
 		System.out.println("The result is " + result);*/
 
 		var imageStorage = new ImageStore();
-
 		//Compress JPEG and apply B&W filter
 		imageStorage.store("image1.JPEG", new JpegCompressor());
 		// Compress JPEG and apply High contrast filter
