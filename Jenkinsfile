@@ -5,7 +5,8 @@ pipeline {
     }
     environment {
        //IMAGE_TAG = "${GIT_COMMIT}"
-       IMAGE_TAG = "${env.TAG_NAME}"
+       //IMAGE_TAG = "${env.TAG_NAME}"
+       IMAGE_TAG = "${env.BRANCH_NAME}"
     }
     stages {
         stage('Build maven project') {
