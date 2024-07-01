@@ -3,6 +3,9 @@ pipeline {
     tools{
         maven 'maven_3.9.8'
     }
+    environment {
+       IMAGE_TAG = ${GIT_COMMIT}
+    }
     stages {
         stage('Build maven project') {
             steps {
@@ -14,7 +17,7 @@ pipeline {
             steps{
                 script{
                   sh 'docker build -t todo .'
-                  sh 'docker tag todo:latest aboubacar/todo'
+                  sh 'docker tag todo:${IMAGE_TAG} aboubacar/todo:${IMAGE_TAG}'
                 }
             }
         }
@@ -25,7 +28,7 @@ pipeline {
 
                         sh 'docker login -u aboubacar -p ${dockerhubpwd}'
 
-                        sh 'docker push aboubacar/todo'
+                        sh 'docker push aboubacar/todo:${IMAGE_TAG}'
                     }
 
                 }
