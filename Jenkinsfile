@@ -4,7 +4,7 @@ pipeline {
         maven 'maven_3.9.8'
     }
     environment {
-       IMAGE_TAG = ${GIT_COMMIT}
+       IMAGE_TAG = '${GIT_COMMIT}'
     }
     stages {
         stage('Build maven project') {
