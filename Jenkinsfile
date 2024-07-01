@@ -16,7 +16,7 @@ pipeline {
         stage('Build docker image') {
             steps{
                 script{
-                  sh 'docker build -t todo .'
+                  sh 'docker build -t todo:${IMAGE_TAG} .'
                   sh 'docker tag todo:${IMAGE_TAG} aboubacar/todo:${IMAGE_TAG}'
                 }
             }
